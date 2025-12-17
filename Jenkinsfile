@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         TARGET_USER = "onprem"
-        TARGET_HOST = "192.168.150.66"
+        TARGET_HOST = "192.168.192.66"
     }
 
     stages {
