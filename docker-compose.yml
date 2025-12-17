@@ -1,0 +1,11 @@
+services:
+  app:
+    build: .
+    container_name: assurance-backend
+    ports:
+      - "8090:8090"
+    volumes:
+      - ./.env.development:/app/.env.development
+      - ./.env.production:/app/.env.production
+    environment:
+      - APP_ENV=production
