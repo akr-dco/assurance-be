@@ -1,7 +1,7 @@
 services:
   app:
     build: .
-    container_name: assurance-backend
+    container_name: assurance-backend-prod
     ports:
       - "8090:8090"
     volumes:
