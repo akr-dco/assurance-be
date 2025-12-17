@@ -2,8 +2,8 @@ pipeline {
     agent any
 
     environment {
-        TARGET_USER = "docker_prod"
-        TARGET_HOST = "192.168.150.150"
+        TARGET_USER = "onprem"
+        TARGET_HOST = "192.168.150.66"
     }
 
     stages {
@@ -12,7 +12,7 @@ pipeline {
             steps {
                 script {
                     if (env.BRANCH_NAME == 'main') {
-                        env.TARGET_DIR = "/home/docker_prod/cicd-prod/assurance-be"
+                        env.TARGET_DIR = "/home/onprem/cicd-prod/assurance-be"
                     } else if (env.BRANCH_NAME == 'dev') {
                         env.TARGET_DIR = "/home/docker_prod/cicd-dev/assurance-be"
                     } else {
